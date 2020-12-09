@@ -1,40 +1,32 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import Posts from "./components/Posts.jsx";
 import Comments from "./components/Comments.jsx";
 import "./App.css";
 
 const url = "https://jsonplaceholder.typicode.com/posts";
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: [],
-      comments: [],
-    };
-  }
+export default function App() {
+  const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
 
-  componentDidMount() {
+  useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((posts) => this.setState({ posts }))
+      .then((posts) => setPosts(posts))
       .catch((err) => console.log(err));
-  }
+  });
 
-  handleCommentsClick = (id) => {
+  const handleCommentsClick = (id) => {
+    setComments([]);
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
       .then((res) => res.json())
-      .then((comments) => this.setState({ comments }))
+      .then((comments) => setComments(comments))
       .catch((err) => console.log(err));
   };
-
-  render() {
-    const { posts, comments } = this.state;
-    return (
-      <div className="App">
-        <Posts posts={posts} handleCommentsClick={this.handleCommentsClick} />
-        <Comments comments={comments} />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Posts posts={posts} handleCommentsClick={handleCommentsClick} />
+      <Comments comments={comments} />
+    </div>
+  );
 }
