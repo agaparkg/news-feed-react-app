@@ -1,6 +1,6 @@
 # News Feed React App
 
-![Output](readmeimg.PNG)
+![Output](readme.PNG)
 
 ## API for all posts
 
