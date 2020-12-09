@@ -1,6 +1,6 @@
 # News Feed React App
 
-![Visual Output](relative/path/to/img.jpg?raw=true "News Feed")
+![Visual Output](./readmeimg.png?raw=true "News Feed")
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
