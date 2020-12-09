@@ -6,15 +6,17 @@ export default function Posts({ posts, handleCommentsClick }) {
   return (
     <div className="news-feed">
       <div className="feed-header">News Feed</div>
-      {posts.map((post) => {
-        return (
-          <SinglePost
-            key={post.id}
-            post={post}
-            handleCommentsClick={handleCommentsClick}
-          />
-        );
-      })}
+      <div className="feed-posts">
+        {posts.map((post) => {
+          return (
+            <SinglePost
+              key={post.id}
+              post={post}
+              handleCommentsClick={handleCommentsClick}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
