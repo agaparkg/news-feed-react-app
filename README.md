@@ -2,8 +2,6 @@
 
 ![Output](readmeimg.PNG)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## API for all posts
 
 [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
@@ -15,4 +13,4 @@ In the project directory, you can run:
 
 ### Deployment
 
-This React App has been deployed to Heroku: [https://dashboard.heroku.com/apps](https://dashboard.heroku.com/apps)
+This React App has been deployed to Heroku: [https://news-post-react-app.herokuapp.com/](https://news-post-react-app.herokuapp.com/)
