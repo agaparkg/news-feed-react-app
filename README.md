@@ -13,4 +13,6 @@ In the project directory, you can run:
 
 ### Deployment
 
-This React App has been deployed to Heroku: [https://news-post-react-app.herokuapp.com/](https://news-post-react-app.herokuapp.com/)
+This React App has been deployed to:
+Heroku - [https://news-post-react-app.herokuapp.com/](https://news-post-react-app.herokuapp.com/)
+and Surge - [http://vengeful-balls.surge.sh/](http://vengeful-balls.surge.sh/)
